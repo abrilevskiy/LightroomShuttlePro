@@ -1,6 +1,17 @@
 # LightroomShuttlePro
 Lightroom plugin for support contour design ShuttlePro v2
 
+## FUNCTIONALITY
+
+TBD
+- [x] Key Combination
+- [x] Cycle through settings 
+- [x] Rating
+- [x] Basic Adjustment
+- [] Zoom
+- [] Crop
+- [] Rotate
+
 ## PREREQUISITES
 1. Have Shuttle Driver installed from: https://www.contourdesign.com/support/drivers/
 
@@ -26,3 +37,12 @@ TBD: provide full description of commandKeyToAction.xml file format
 
 1. Start Lightroom
 2. Use Shuttle as configured by commandKeyToAction.xml
+
+### Default functionality:
+- Key Combination is specified with "+": *Button_9+Button_7* means: press and hold *Button_9*, than press and release *Button_7*
+- Change layout: ShuttleSwitchProfile = Develop/Library
+- Rating. Rating is set by number: rating = X
+- Navigation by photo: select = next/previous
+- Switch Lightroom mode: SwitchToModule = develop/library
+- Select Develop parameter: SwitchBasicAdjustParam = -/+
+- Change value for selected Develop parameter: ActiveDevelopParam = -/+
