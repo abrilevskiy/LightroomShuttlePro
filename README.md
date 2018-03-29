@@ -8,9 +8,9 @@ TBD
 - [x] Cycle through settings 
 - [x] Rating
 - [x] Basic Adjustment
-- [] Zoom
-- [] Crop
-- [] Rotate
+- [ ] Zoom
+- [ ] Crop
+- [ ] Rotate
 
 ## PREREQUISITES
 1. Have Shuttle Driver installed from: https://www.contourdesign.com/support/drivers/
