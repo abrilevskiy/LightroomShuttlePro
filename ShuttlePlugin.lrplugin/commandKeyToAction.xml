@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cereal>
+	<value0 size="dynamic">
+		<value0>
+			<key>Library</key>
+			<value size="dynamic">
+				<value0>
+					<key>Button_5</key>
+					<value size="dynamic">
+						<value0>rating = 2</value0>
+					</value>
+				</value0>
+				<value1>
+					<key>Jog_Left</key>
+					<value size="dynamic">
+						<value0>select = previous</value0>
+					</value>
+				</value1>
+				<value2>
+					<key>Button_9+Jog_Left</key>
+					<value size="dynamic">
+						<value0>SwitchBasicAdjustParam = -</value0>
+					</value>
+				</value2>
+				<value3>
+					<key>Button_8</key>
+					<value size="dynamic">
+						<value0>rating = 5</value0>
+					</value>
+				</value3>
+				<value4>
+					<key>Jog_Right</key>
+					<value size="dynamic">
+						<value0>select = next</value0>
+					</value>
+				</value4>
+				<value5>
+					<key>Button_4</key>
+					<value size="dynamic">
+						<value0>rating = 1</value0>
+					</value>
+				</value5>
+				<value6>
+					<key>Button_6</key>
+					<value size="dynamic">
+						<value0>rating = 3</value0>
+					</value>
+				</value6>
+				<value7>
+					<key>Button_7</key>
+					<value size="dynamic">
+						<value0>rating = 4</value0>
+					</value>
+				</value7>
+				<value8>
+					<key>Button_9+Jog_Right</key>
+					<value size="dynamic">
+						<value0>SwitchBasicAdjustParam = +</value0>
+					</value>
+				</value8>
+				<value9>
+					<key>Button_9+Button_7</key>
+					<value size="dynamic">
+						<value0>ShuttleSwitchProfile = Library</value0>
+						<value1>SwitchToModule = library</value1>
+					</value>
+				</value9>
+				<value10>
+					<key>Button_9+Button_8</key>
+					<value size="dynamic">
+						<value0>ShuttleSwitchProfile = Develop</value0>
+						<value1>SwitchToModule = develop</value1>
+					</value>
+				</value10>
+			</value>
+		</value0>
+		<value1>
+			<key>Develop</key>
+			<value size="dynamic">
+				<value0>
+					<key>Jog_Left</key>
+					<value size="dynamic">
+						<value0>ActiveDevelopParam = -</value0>
+					</value>
+				</value0>
+				<value1>
+					<key>Button_9+Jog_Left</key>
+					<value size="dynamic">
+						<value0>SwitchBasicAdjustParam = -</value0>
+					</value>
+				</value1>
+				<value2>
+					<key>Jog_Right</key>
+					<value size="dynamic">
+						<value0>ActiveDevelopParam = +</value0>
+					</value>
+				</value2>
+				<value3>
+					<key>Button_9+Jog_Right</key>
+					<value size="dynamic">
+						<value0>SwitchBasicAdjustParam = +</value0>
+					</value>
+				</value3>
+				<value4>
+					<key>Button_9+Button_7</key>
+					<value size="dynamic">
+						<value0>ShuttleSwitchProfile = Library</value0>
+						<value1>SwitchToModule = library</value1>
+					</value>
+				</value4>
+				<value5>
+					<key>Button_10+Jog_Left</key>
+					<value size="dynamic">
+						<value0>SwitchDetailsAdjustParam = -</value0>
+					</value>
+				</value5>
+				<value6>
+					<key>Button_9+Button_8</key>
+					<value size="dynamic">
+						<value0>ShuttleSwitchProfile = Develop</value0>
+						<value1>SwitchToModule = develop</value1>
+					</value>
+				</value6>
+				<value7>
+					<key>Button_10+Jog_Right</key>
+					<value size="dynamic">
+						<value0>SwitchDetailsAdjustParam = +</value0>
+					</value>
+				</value7>
+			</value>
+		</value1>
+	</value0>
+</cereal>
+
