@@ -40,6 +40,15 @@ Button_9+Button_8 -> Develop
 
 ![Key numbers](./ShuttlePROv2_keys.jpg)
 
+
+- Key Combination is specified with "+": *Button_9+Button_7* means: press and hold *Button_9*, than press and release *Button_7*
+- Change layout: ShuttleSwitchProfile = Develop/Library
+- Rating. Rating is set by number: rating = X
+- Navigation by photo: select = next/previous
+- Switch Lightroom mode: SwitchToModule = develop/library
+- Select Develop parameter: SwitchBasicAdjustParam = -/+
+- Change value for selected Develop parameter: ActiveDevelopParam = -/+
+
 TBD: provide full description of commandKeyToAction.xml file format
 
 ## USAGE:
@@ -48,10 +57,35 @@ TBD: provide full description of commandKeyToAction.xml file format
 2. Use Shuttle as configured by commandKeyToAction.xml
 
 ### Default functionality:
-- Key Combination is specified with "+": *Button_9+Button_7* means: press and hold *Button_9*, than press and release *Button_7*
-- Change layout: ShuttleSwitchProfile = Develop/Library
-- Rating. Rating is set by number: rating = X
-- Navigation by photo: select = next/previous
-- Switch Lightroom mode: SwitchToModule = develop/library
-- Select Develop parameter: SwitchBasicAdjustParam = -/+
-- Change value for selected Develop parameter: ActiveDevelopParam = -/+
+By default Library layout is activated.
+- Library layout default keys:
+-- Button_4 ... Button_8 - set Rating from 1 to 5 
+-- Jog_Left/Jog_Right - select photo Previous/Next
+-- Button_9+Button_7 - switch layout and Lightroom to Library
+-- Button_9+Button_8 - switch layout and Lightroom to Develop
+- Develop layout default keys:
+-- Button_9+Jog_Left/Jog_Right - select Basic Adjust parameter in loop:
+--- Temperature
+--- Tint
+--- Exposure
+--- Contrast
+--- Highlights
+--- Shadows
+--- Whites
+--- Blacks
+--- Clarity
+--- Vibrance
+--- Saturation
+-- Button_10+Jog_Left/Jog_Right - select Details Adjust parameter in loop:
+--- Sharpness
+--- SharpenRadius
+--- SharpenDetail
+--- SharpenEdgeMasking
+--- LuminanceSmoothing
+--- LuminanceNoiseReductionDetail
+--- LuminanceNoiseReductionContrast
+--- ColorNoiseReduction
+--- ColorNoiseReductionDetail
+--- ColorNoiseReductionSmoothness
+-- Jog_Left/Right - decrease/increase selected Adjust parameter
+
