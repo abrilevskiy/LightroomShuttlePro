@@ -15,6 +15,7 @@
 #include <iostream>
 #include <regex>
 #include "LrConnections.h"
+#include "ShuttleSDK.h"
 
 std::vector<unsigned long> Context::_pressed_keys = std::vector<unsigned long>();
 
@@ -36,7 +37,7 @@ void Context::Init(std::string commandToKeyPath) {
 	_lrConnection.Connect();
 	_currentSettings = "Library";
 
-	for (DWORD i = 61; i <= 75; i++) {
+	for (DWORD i = SHUTTLEEVENTBUTTONFIRST; i <= SHUTTLEEVENTBUTTONLAST; i++) {
 		keyCodeToName.insert(std::pair<DWORD, std::string>(i, "Button_" + std::to_string(i - 60)));
 	}
 
