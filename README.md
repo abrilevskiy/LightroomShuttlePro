@@ -4,8 +4,8 @@ Lightroom plugin for support contour design ShuttlePro v2
 The idea of the plugin is based on the following features:
 1. Combination of Shuttle keys pressed support like on keyboard: Hold one button and press another. Each combination could be assigned with different Lightroom action.
 2. Key combinations will also be possible with the Jog:
- – Hold one Shuttle key and rotate Jog – for example: loop through basic adjustment parameters (Temp, Exposure, Clarity, …)
- – Hold another Shuttle key and rotate Jog – some other actions
+   – Hold one Shuttle key and rotate Jog – for example: loop through basic adjustment parameters (Temp, Exposure, Clarity, …)
+   – Hold another Shuttle key and rotate Jog – some other actions
 3. Multiple actions per combination and layout (key assignment) switching:
 Press Shuttle key (or Combination) and Lightroom will be switched to Develop module. Shuttle layout will be changed to Development layout.
 
