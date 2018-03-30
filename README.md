@@ -59,33 +59,33 @@ TBD: provide full description of commandKeyToAction.xml file format
 ### Default functionality:
 By default Library layout is activated.
 - Library layout default keys:
--- Button_4 ... Button_8 - set Rating from 1 to 5 
--- Jog_Left/Jog_Right - select photo Previous/Next
--- Button_9+Button_7 - switch layout and Lightroom to Library
--- Button_9+Button_8 - switch layout and Lightroom to Develop
+  - Button_4 ... Button_8 - set Rating from 1 to 5 
+  - Jog_Left/Jog_Right - select photo Previous/Next
+  - Button_9+Button_7 - switch layout and Lightroom to Library
+  - Button_9+Button_8 - switch layout and Lightroom to Develop
 - Develop layout default keys:
--- Button_9+Jog_Left/Jog_Right - select Basic Adjust parameter in loop:
---- Temperature
---- Tint
---- Exposure
---- Contrast
---- Highlights
---- Shadows
---- Whites
---- Blacks
---- Clarity
---- Vibrance
---- Saturation
--- Button_10+Jog_Left/Jog_Right - select Details Adjust parameter in loop:
---- Sharpness
---- SharpenRadius
---- SharpenDetail
---- SharpenEdgeMasking
---- LuminanceSmoothing
---- LuminanceNoiseReductionDetail
---- LuminanceNoiseReductionContrast
---- ColorNoiseReduction
---- ColorNoiseReductionDetail
---- ColorNoiseReductionSmoothness
--- Jog_Left/Right - decrease/increase selected Adjust parameter
+  - Button_9+Jog_Left/Jog_Right - select Basic Adjust parameter in loop:
+    - Temperature
+    - Tint
+    - Exposure
+    - Contrast
+    - Highlights
+    - Shadows
+    - Whites
+    - Blacks
+    - Clarity
+    - Vibrance
+    - Saturation
+  - Button_10+Jog_Left/Jog_Right - select Details Adjust parameter in loop:
+    - Sharpness
+    - SharpenRadius
+    - SharpenDetail
+    - SharpenEdgeMasking
+    - LuminanceSmoothing
+    - LuminanceNoiseReductionDetail
+    - LuminanceNoiseReductionContrast
+    - ColorNoiseReduction
+    - ColorNoiseReductionDetail
+    - ColorNoiseReductionSmoothness
+  - Jog_Left/Right - decrease/increase selected Adjust parameter
 
