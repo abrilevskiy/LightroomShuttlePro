@@ -16,10 +16,10 @@ local LrSelection = import "LrSelection"
 local LrDevelopController = import "LrDevelopController"
 local LrSocket = import "LrSocket"
 local LrTableUtils = import "LrTableUtils"
-local LrMobdebug = import 'LrMobdebug'
+--local LrMobdebug = import 'LrMobdebug'
 local LrShell = import 'LrShell'
 local LrPathUtils = import 'LrPathUtils'
-LrMobdebug.start()
+--LrMobdebug.start()
 --==============================================================================
 
 -- Port numbers
