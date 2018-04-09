@@ -9,6 +9,8 @@ The idea of the plugin is based on the following features:
 3. Multiple actions per combination and layout (key assignment) switching:
 Press Shuttle key (or Combination) and Lightroom will be switched to Develop module. Shuttle layout will be changed to Development layout.
 
+Video Demo: https://www.youtube.com/watch?v=26Smzy6-b_0&t=118s
+
 
 ## FUNCTIONALITY
 
