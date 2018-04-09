@@ -25,10 +25,17 @@ TBD
 
 ## PREREQUISITES
 1. Have Shuttle Driver installed from: https://www.contourdesign.com/support/drivers/
+2. Download & Install Visual C++ Redistributable from:
+   - https://aka.ms/vs/15/release/vc_redist.x86.exe
+   - https://aka.ms/vs/15/release/vc_redist.x64.exe   
 
 ## INSTALLATION
 
-1. Put "ShuttlePlugin.lrplugin" directory to Lightroom plugin directory, by default it is: c:\Users\<UserName>\AppData\Roaming\Adobe\Lightroom\Modules\ShuttlePlugin.lrplugin\
+1. Download ShuttlePlugin.lrplugin.zip from https://github.com/abrilevskiy/LightroomShuttlePro/releases/latest
+2. Extract ShuttlePlugin.lrplugin.zip to any folder
+3. Install plugin to Lightroom via one of the following method:
+   - Put "ShuttlePlugin.lrplugin" directory to Lightroom plugin directory
+   - Add "ShuttlePlugin.lrplugin" directory in Lightroom Plug-in manager (Ctrl+Alt+Shift+,)
 
 ## CONFIGURATION
 
