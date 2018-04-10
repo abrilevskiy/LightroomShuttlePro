@@ -36,6 +36,7 @@ TBD
 3. Install plugin to Lightroom via one of the following method:
    - Put "ShuttlePlugin.lrplugin" directory to Lightroom plugin directory
    - Add "ShuttlePlugin.lrplugin" directory in Lightroom Plug-in manager (Ctrl+Alt+Shift+,)
+4. Disable "Lightroom" and "Lightroom 5" profiles in Contour Design Control Panel
 
 ## CONFIGURATION
 
