@@ -47,6 +47,13 @@ local develop_params = {
 }
 
 local ActiveDevelopParam = "Temperature"
+local ActiveView = "loupe"
+
+local loopsActive = {
+    adjustBasic = "Temperature",
+    adjustDetails = "Sharpness",
+    viewLoop = "loupe"
+  }
 
 
 local adjustBasic = {
@@ -75,43 +82,111 @@ local adjustDetails = {
     "ColorNoiseReductionDetail",
     "ColorNoiseReductionSmoothness",
 }
-
-local extensionCommand = {
-    "SwitchAdjustParam"
+local viewLoop = {
+    "loupe",
+    "grid",
+    "compare",
+    "survey",
+    "people",
+    "develop_loupe",
+    "develop_before_after_horiz",
+    "develop_before_after_vert",
+    "develop_before"
 }
 
-local function extensionCommandProcessor(command, value)
-    local adjustListToSerach = adjustBasic
-
-    if command == "SwitchDetailsAdjustParam" then
-        adjustListToSerach = adjustDetails
-    end
-
+local loops = {
+    adjustBasic = adjustBasic,
+    adjustDetails = adjustDetails,
+    viewLoop = viewLoop
+  }
+  
+local function setLoop(loopName, value)
+    local adjustListToSerach = loops[loopName]
     local index = nil
     for i = 1, #adjustListToSerach do
-        if adjustListToSerach[i] == ActiveDevelopParam then
+        if adjustListToSerach[i] == loopsActive[loopName] then
             index = i
             break
         end
     end
     if index == nil then
-        ActiveDevelopParam = adjustListToSerach[1]
+        loopsActive[loopName] = adjustListToSerach[1]
 
     else
         if (value == "+" and index == #adjustListToSerach) then
-            ActiveDevelopParam = adjustListToSerach[1]
+            loopsActive[loopName] = adjustListToSerach[1]
         elseif (value == "-" and index == 1) then
-            ActiveDevelopParam = adjustListToSerach[#adjustListToSerach]
+            loopsActive[loopName] = adjustListToSerach[#adjustListToSerach]
         else
             if (value == "+") then
-                ActiveDevelopParam = adjustListToSerach[index + 1]
+                loopsActive[loopName] = adjustListToSerach[index + 1]
             elseif (value == "-") then
-                ActiveDevelopParam = adjustListToSerach[index - 1]
-                ActiveDevelopParam = adjustListToSerach[index - 1]
+                loopsActive[loopName] = adjustListToSerach[index - 1]
+                loopsActive[loopName] = adjustListToSerach[index - 1]
             end
         end
     end
-    LrDialogs.showBezel(ActiveDevelopParam, 1)
+    ActiveDevelopParam = loopsActive[loopName]
+    LrDialogs.showBezel(loopsActive[loopName], 1)
+  end
+
+
+local extensionCommand = {
+ --   SwitchAdjustParam = function() end,
+ --   SwitchDetailsAdjustParam = function() end,
+    SwitchView = function(value) setLoop("viewLoop", value); LrApplicationView.showView(loopsActive["viewLoop"]); end,
+    SwitchZoomIn = LrApplicationView.zoomInSome,
+    SwitchZoomOut = LrApplicationView.zoomOutSome,
+}
+
+
+local function extensionCommandProcessor(command, value)
+ --   LrMobdebug.start()
+    if extensionCommand[command] ~= nil then
+        extensionCommand[command](value)
+        return true
+    end
+    
+    local loopName = "adjustBasic"
+
+    if command == "SwitchDetailsAdjustParam" then
+        loopName = "adjustDetails"
+    end
+
+    if command == "SwitchView" then
+        loopName = "viewLoop"
+    end
+    
+    local adjustListToSerach = loops[loopName]
+    local index = nil
+    for i = 1, #adjustListToSerach do
+        if adjustListToSerach[i] == loopsActive[loopName] then
+            index = i
+            break
+        end
+    end
+    if index == nil then
+        loopsActive[loopName] = adjustListToSerach[1]
+
+    else
+        if (value == "+" and index == #adjustListToSerach) then
+            loopsActive[loopName] = adjustListToSerach[1]
+        elseif (value == "-" and index == 1) then
+            loopsActive[loopName] = adjustListToSerach[#adjustListToSerach]
+        else
+            if (value == "+") then
+                loopsActive[loopName] = adjustListToSerach[index + 1]
+            elseif (value == "-") then
+                loopsActive[loopName] = adjustListToSerach[index - 1]
+                loopsActive[loopName] = adjustListToSerach[index - 1]
+            end
+        end
+    end
+    if command == "SwitchView" then
+        LrApplicationView.showView(loopsActive[loopName])
+    end
+    ActiveDevelopParam = loopsActive[loopName]
+    LrDialogs.showBezel(loopsActive[loopName], 1)
 end
 
 local function switchDevelopParam(panelName, direction)
@@ -162,14 +237,20 @@ end
 -- Given a key/value pair that has been parsed from a receiver port message, calls
 -- the appropriate API to adjust a setting in Lr.
 local function setValue(key, value)
-    if key == "SwitchBasicAdjustParam" or key == "SwitchDetailsAdjustParam" then
-        extensionCommandProcessor(key, value)
-        return false
-    end
+    String = key
+    Start = "Switch"
+
     if key == "SwitchToModule" then
         LrApplicationView.switchToModule(value)
         return false
     end
+    isSwitch = string.sub(String,1,string.len(Start))==Start
+    --if key == "SwitchBasicAdjustParam" or key == "SwitchDetailsAdjustParam" then
+    if isSwitch then
+        extensionCommandProcessor(key, value)
+        return false
+    end
+
     if value == "+" then -- ex: "Exposure = +"
         LrDevelopController.increment(key)
         return true
