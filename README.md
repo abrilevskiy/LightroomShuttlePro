@@ -19,9 +19,10 @@ TBD
 - [x] Cycle through settings 
 - [x] Rating
 - [x] Basic Adjustment
-- [ ] Zoom
+- [x] Zoom
 - [ ] Crop
 - [ ] Rotate
+- [ ] Size of brush
 
 ## PREREQUISITES
 1. Have Shuttle Driver installed from: https://www.contourdesign.com/support/drivers/
